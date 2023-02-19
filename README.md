@@ -1,2 +1,2 @@
 # fc51
-Biblioteca para el sensor de distancia ultrasónico FC-51
+Biblioteca para el sensor de proximidad infrarrojo FC-51
