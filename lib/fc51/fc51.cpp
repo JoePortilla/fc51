@@ -19,9 +19,17 @@ void FC51::setup(uint8_t pin)
 
 bool FC51::detection()
 {
-    bool status = 0;
     // Lectura del estado digital del sensor
     status = digitalRead(_pin);
 
-    return status;
+    // El sensor maneja logica negativa, por lo que un estado bajo o 0,
+    // indica que se ha detectado algo.
+    if (status == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }

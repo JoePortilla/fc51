@@ -4,7 +4,7 @@
 // Creación de un objeto de la clase FC51
 FC51 sensorIR;
 // GPIO al que se conecta el sensor infrarojo.
-uint8_t fc51Pin = 14;
+uint8_t fc51Pin = 34;
 
 void setup()
 {
@@ -17,14 +17,10 @@ void setup()
 void loop()
 {
   // Medición de proximidad
-  if (sensorIR.detection() == 1)
+  if (sensorIR.detection())
   {
     Serial.println("Objeto detectado!");
   }
-  else
-  {
-    Serial.println("Objeto no detectado.");
-  }
 
-  delay(1000);
+  delay(200);
 }

@@ -34,7 +34,8 @@ public:
     bool detection();
 
 private:
-    uint8_t _pin; // GPIO al que se conecta el sensor.
+    uint8_t _pin;    // GPIO al que se conecta el sensor.
+    bool status = 0; // Estado de proximidad.
 };
 
 #endif
